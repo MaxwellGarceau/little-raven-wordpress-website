@@ -8,7 +8,6 @@
     <meta name="author" content="Little Raven">
     <meta name="description" content="Little Raven Music. Nashville, TN">
     <meta name="keywords" content="Music, Rock, Art, Funk">
-    <link rel="stylesheet" href="http://little-raven-website-new.local/wp-content/themes/little-raven-website/style.css">
     <?php wp_head(); ?>
 </head>
 

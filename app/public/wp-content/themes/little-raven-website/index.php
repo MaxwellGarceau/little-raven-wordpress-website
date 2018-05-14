@@ -1,9 +1,9 @@
 <?php get_header() ?>
 <section id="home">
     <!-- background video here -->
-    <video class="video-fullpage" poster="http://little-raven-website.local/wp-content/uploads/2018/04/vid-poster.png" autoplay="true" loop controls muted playsinline>
-        <source src="http://little-raven-website.local/wp-content/uploads/2018/04/vid-bgvid.mp4" type="video/mp4">
-        <source src="http://little-raven-website.local/wp-content/uploads/2018/04/vid-bgvid.webm" type="video/webm">
+    <video class="video-fullpage" poster="<?php echo wp_upload_dir()['baseurl'];?>/2018/04/vid-poster.png" autoplay="true" loop controls muted playsinline>
+        <source src="<?php echo wp_upload_dir()['baseurl'];?>/2018/04/vid-bgvid.mp4" type="video/mp4">
+        <source src="<?php echo wp_upload_dir()['baseurl'];?>/2018/04/vid-bgvid.webm" type="video/webm">
     </video>
     <div class="main-content">
         <h1>Little Raven</h1>

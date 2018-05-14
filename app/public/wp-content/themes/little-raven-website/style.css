@@ -154,6 +154,14 @@ section {
 .bg-dark {
   background-color: black; }
 
+.footer-icons {
+  color: black;
+  font-size: 1.4em;
+  transition: .3s; }
+
+.footer-icons:hover {
+  color: white; }
+
 /* Contact Form */
 .contact-form {
   text-align: left; }
@@ -259,6 +267,9 @@ section {
 .hidden-display {
   display: none !important; }
 
+@media screen and (max-width: 1200px) {
+  .bio-pic {
+    margin-bottom: 10px; } }
 @media screen and (max-width: 950px) {
   .meta-box {
     width: 80%; }
@@ -311,9 +322,6 @@ section {
 
   .newsfeed-gap {
     padding-bottom: 230px; }
-
-  .bio-pic {
-    margin-bottom: 10px; }
 
   .bio__padding-bottom {
     padding-bottom: 0; }

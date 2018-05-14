@@ -1,0 +1,421 @@
+/*
+  Theme Name: Little Raven Wordpress Website
+  Author: Max
+  Version: 1.0
+*/
+
+// Sass Variables
+
+$main-text-color: white;
+$title-padding: 100px;
+$title-font: "niewe-regular";
+$title-font-size: 7em;
+$title-font-size-mobile: 5.5em;
+$margin-default: 50px;
+$border-radius-main: 50px;
+$border-radius-small: 20px;
+$title-font-size-smaller: 4em;
+$grey: #e8e8e8;
+
+@font-face {
+	font-family: "niewe-regular";
+	src: url("fonts/mrzyan_niewe/niewe-regular.otf");
+}
+
+@font-face {
+	font-family: "din-light-regular";
+	src: url("fonts/din-light-regular.otf");
+}
+
+body {
+	text-align: center;
+	margin: 0 auto;
+	color: $main-text-color;
+	font-family: "Saira Condensed", sans-serif;
+	letter-spacing: 0.15em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $title-font;
+	font-size: $title-font-size;
+}
+
+#home h6 {
+	font-family: "din-light-regular", sans-serif;
+}
+
+h1 {
+	padding-top: $title-padding;
+}
+
+h2 {
+	padding-top: $title-padding;
+}
+
+h3 {
+	font-size: $title-font-size-smaller;
+}
+
+/* Gets rid of margin for last paragraph in the content section of the page */
+div > p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Generic Centering */
+
+.center-absolute {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.margin-default {
+	margin-top: $margin-default;
+}
+
+/* Video */
+
+.video-fullpage {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -998;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 1s linear;
+}
+
+.navbar {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Page Images */
+
+.main-background::before {
+	content: "";
+	position: fixed;
+	// padding-top: -400px;
+	left: 0;
+	right: 0;
+	z-index: -999;
+
+	display: block;
+	background-color: #222326;
+	background-image: url("images/skull_hawk.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	filter: brightness(80%);
+}
+
+.bio__padding-bottom {
+	padding-bottom: 200px;
+}
+
+section {
+	opacity: 1;
+	transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out;
+}
+
+.contact-background::before {
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -999;
+
+	display: block;
+	background-image: url("images/contact-page-bg.jpg");
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	filter: brightness(60%);
+}
+
+.bio-pic {
+	padding-top: 10px;
+	border-radius: $border-radius-small;
+	width: 100%;
+	height: 100%;
+}
+
+.main-content-well {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 60%;
+	margin: 0 auto;
+	border-radius: $border-radius-small;
+	padding: 50px;
+}
+
+/* Music Player */
+
+.music-player {
+	border-radius: $border-radius-small;
+}
+
+/* Page Layout Styles */
+
+.title__bg-color {
+	background-color: black;
+}
+
+.content__bg-color {
+	background-color: gray;
+}
+
+.video-wrapper {
+	width: 200px;
+	overflow: hidden;
+	display: block;
+	height: 200px;
+}
+
+.video-dimensions {
+	margin-bottom: -1000px;
+}
+
+/* Footer */
+
+.bg-dark {
+	background-color: black;
+}
+
+/* Contact Form */
+
+.contact-form {
+	text-align: left;
+}
+
+.wpforms-submit-container {
+	text-align: center;
+}
+
+#wpforms-submit-58 {
+	text-align: center;
+	border-radius: $border-radius-main;
+	font-size: 1.5em;
+}
+
+/* Calendar */
+
+.hide-element {
+	display: none;
+}
+
+.simcal-icon-left,
+.simcal-icon-right {
+	color: white;
+}
+
+// Important only used when absolutely neccessary to target 3rd party css that can't otherwise be targeted
+.simcal-icon-right:disabled {
+	color: purple !important;
+}
+
+.simcal-nav-button:disabled {
+	color: purple !important;
+}
+
+.main-button__color {
+	color: white;
+	background-color: black !important;
+	transition: 0.6s ease;
+}
+
+.main-button__color:hover {
+	color: black;
+	background-color: white !important;
+}
+
+.main-button__dimensions {
+	border-radius: $border-radius-main;
+}
+
+.main-button__color:focus {
+	outline: none;
+}
+
+.error-button {
+	font-size: 1.8em;
+	padding: 5px 15px;
+}
+
+.main-button--margin {
+	margin-top: 20px;
+}
+
+/* Newsfeed */
+
+.newsfeed-gap {
+	padding-bottom: 385px;
+}
+
+.newsfeed-title {
+	font-size: 4.5em;
+	// margin-top: 10px;
+	margin: auto;
+	margin-bottom: 25px;
+	padding-top: 13px;
+	border-radius: 50px;
+	width: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	// opacity: .1;
+	color: black;
+}
+
+.newsfeed-post-title {
+	font-size: 3em;
+}
+
+.newsfeed-well__width {
+	width: 90%;
+}
+
+.newsfeed__margin {
+	margin-bottom: 20px;
+}
+
+.meta-box {
+	background-color: $grey;
+	opacity: 0.5;
+	color: black;
+	border-radius: $border-radius-main;
+	width: 40%;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+/* Single Page */
+
+.single-post__margin {
+	padding-top: 100px;
+}
+
+.single-title__font {
+	font-size: 4.5em;
+	font-family: "din-light-regular", sans-serif;
+}
+
+.single-link--box {
+	background-color: $grey;
+	opacity: 0.8;
+	color: black;
+	border-radius: $border-radius-main;
+	width: 200px;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+// Hide/Display
+
+.visible-display {
+	display: block !important;
+}
+
+.hidden-display {
+	display: none !important;
+}
+
+@media screen and (max-width: 950px) {
+	.meta-box {
+		width: 80%;
+	}
+	.generic-content {
+		width: 100%;
+	}
+	.main-content-well {
+		width: 70%;
+		padding: 25px;
+	}
+	.newsfeed-title {
+		width: 70%;
+	}
+}
+
+// Important only used when absolutely neccessary to target 3rd party css that can't otherwise be targeted
+@media screen and (max-width: 800px) {
+	.simcal-events-dots {
+		display: none !important;
+	}
+	.simcal-event-details {
+		display: none !important;
+	}
+	.simcal-events {
+		display: block !important;
+	}
+	.simcal-event-title {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: $title-font-size-mobile;
+	}
+	.simcal-nav h3 {
+		font-size: 3.5em;
+	}
+	.main-content-well {
+		width: 90%;
+		padding: 25px;
+	}
+	.meta-box {
+		width: 100%;
+	}
+	.newsfeed-title {
+		width: 90%;
+	}
+	.newsfeed-post-title {
+		font-size: 2.2em;
+	}
+	.newsfeed-gap {
+		padding-bottom: 230px;
+	}
+	.bio-pic {
+		margin-bottom: 10px;
+	}
+	.bio__padding-bottom {
+		padding-bottom: 0;
+	}
+	.single-title__font {
+		font-size: 3.5em;
+		width: 90%;
+		margin: auto;
+	}
+	.meta-box {
+		width: 90%;
+	}
+}

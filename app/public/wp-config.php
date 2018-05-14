@@ -19,17 +19,34 @@
  */
 
 // ** MySQL settings ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'local' );
 
-/** MySQL database username */
-define( 'DB_USER', 'root' );
+if (file_exists(dirname(__FILE__) . '/local.php')) {
+	// LOCAL DATABASE SETTINGS
+	/** The name of the database for WordPress */
+	define( 'DB_NAME', 'local' );
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+	/** MySQL database username */
+	define( 'DB_USER', 'root' );
 
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+	/** MySQL database password */
+	define( 'DB_PASSWORD', 'root' );
+
+	/** MySQL hostname */
+	define( 'DB_HOST', 'localhost' );
+} else {
+	// LIVE DATABASE SETTINGS
+	/** The name of the database for WordPress */
+	define( 'DB_NAME', 'ittlera5_littleravennewdata' );
+
+	/** MySQL database username */
+	define( 'DB_USER', 'ittlera5_WPSE7' );
+
+	/** MySQL database password */
+	define( 'DB_PASSWORD', 'OnyourShoulder1!' );
+
+	/** MySQL hostname */
+	define( 'DB_HOST', 'localhost' );
+}
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
